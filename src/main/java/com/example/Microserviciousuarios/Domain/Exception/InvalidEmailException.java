@@ -1,0 +1,7 @@
+package com.example.Microserviciousuarios.Domain.Exception;
+
+public class InvalidEmailException extends RuntimeException {
+    public InvalidEmailException(String message) {
+        super(message);
+    }
+}
