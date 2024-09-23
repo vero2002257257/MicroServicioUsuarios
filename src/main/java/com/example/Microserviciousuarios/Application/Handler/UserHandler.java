@@ -20,6 +20,9 @@ public class UserHandler implements IUserHandler {
         User user = userRequestMapper.toUser(registerRequest);
         userServicePort.createAuxBodega(user);
     }
-
+    public void createUserClient(RegisterRequest registerRequest) {
+        User user = userRequestMapper.toUser(registerRequest);
+        userServicePort.createClient(user);
+    }
 
 }

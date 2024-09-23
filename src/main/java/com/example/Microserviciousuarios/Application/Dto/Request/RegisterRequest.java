@@ -36,6 +36,4 @@ public class RegisterRequest {
     @Positive
     private String document;
     private LocalDate birthDate;
-    @NotBlank
-    private String role;
 }

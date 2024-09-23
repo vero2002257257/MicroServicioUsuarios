@@ -42,6 +42,15 @@ public class UserUseCase implements IUserServicePort {
         user.setRole(role.get());
         createAuxBodega(user);
     }
+    @Override
+    public void createClient(User user) {
+        Optional<Role> role = rolPersistencePort.getRolByName(ROLE_CLIENT);
+        if (role.isEmpty()) {
+            throw new RoleNotFoundException(ROLE_NOT_FOUND);
+        }
+        user.setRole(role.get());
+        createClient(user);
+    }
 
 
 
