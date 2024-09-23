@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 public interface IUserServicePort {
     void createAuxBodega(User user);
+    void createClient(User user);
     boolean validateEmail(String email);
     String encryptPassword(String password);
     boolean validatePhone(String phone);
